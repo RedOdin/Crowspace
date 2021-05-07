@@ -1,0 +1,39 @@
+@import "./../../../styles/base-variables";
+
+.active-container{
+  border-right: 0.5rem solid red;
+  background-color: rgba($red, 0.1);
+  color: red;
+}
+
+.video-content{
+  width: 60%;
+}
+
+.info-content{
+  width: 40%;
+}
+
+.button-subscribe{
+  border-radius: 0.25rem;
+  border: 0;
+  background-color: $red;
+  color: white;
+}
+
+.heart-icon{
+  color: red;
+  height: 1.5rem;
+  width: 1.5rem;
+  cursor: pointer;
+}
+
+.nav-panel-item{
+  text-decoration: none;
+  color: gray;
+}
+
+.nav-panel-active{
+  color: $red;
+  border-bottom: 0.25rem solid $red;
+}

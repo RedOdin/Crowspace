@@ -1,0 +1,77 @@
+<nb-layout>
+  <nb-layout-column>
+    <div class="main-container">
+      <header class="main-menu">
+        <nav class="d-flex justify-content-between navbar navbar-expand-lg navbar-light bg-white h-100">
+          <div>
+            <a class="navbar-brand text-secondary text-decoration-none text-medium"
+               routerLink="">{{'CAMPAIGNS'| translate}}</a>
+            <a class="navbar-brand text-secondary text-decoration-none"
+               routerLink="/rewards">{{'REWARDS' | translate}}</a>
+            <a class="navbar-brand text-secondary text-decoration-none"
+               routerLink="/contacts">{{'CONTACTS' | translate}}</a>
+          </div>
+          <a class="h-100 d-flex flex-column justify-content-center" routerLink=""><img class="h-75"
+                                src="../assets/images/crowspace.jpg"
+                                alt="img"></a>
+          <div>
+            <a class="navbar-brand text-secondary text-decoration-none"
+               routerLink="/funding-rules">{{'CREATE_PROJECT' | translate}}</a>
+            <a *ngIf="!isLogin"
+               class="navbar-brand text-secondary text-decoration-none"
+               routerLink="/sign-in">{{'SIGN_IN' | translate}}</a>
+            <a *ngIf="isLogin"
+               class="navbar-brand text-secondary text-decoration-none"
+               routerLink="/account/my-projects">Account</a>
+            <select class="form-select text-secondary"
+                    [(ngModel)]="language"
+                    (ngModelChange)="isLanguageChange()">
+              <option value="Russian"
+                      class="form-option">
+                {{'RUSSIAN' | translate}}
+                <img src="../assets/images/icons/Russia.jpg"
+                     alt="">
+              </option>
+              <option value="USA"
+                      class="form-option">
+                {{'ENGLISH' | translate}}
+                <img src="../assets/images/icons/USA.jpg"
+                     alt="">
+              </option>
+            </select>
+          </div>
+        </nav>
+      </header>
+      <div class="main-content">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="footer main-menu bg-white d-flex justify-content-between">
+        <p class="align-self-center text-secondary mb-0 ml-3">Crowspace © 2019-2020</p>
+        <div class="h-100 mr-3">
+          <div *ngIf="language === 'Russian'"
+               class="d-flex h-100 switch-cursor"
+               (click)="toEnglish()">
+            <div class="h-100 d-flex flex-column justify-content-center mr-2">
+              <img height="15"
+                   src="../assets/images/icons/USA.jpg">
+            </div>
+            <div class="h-100 d-flex flex-column justify-content-center text-secondary">
+              <u>{{'SWITCH_TO_ENGLISH_VERSION' | translate}}</u>
+            </div>
+          </div>
+          <div *ngIf="language === 'USA'"
+               class="d-flex h-100 switch-cursor"
+               (click)="toRussian()">
+            <div class="h-100 d-flex flex-column justify-content-center mr-2">
+              <img height="15"
+                   src="../assets/images/icons/Russia.jpg">
+            </div>
+            <div class="h-100 d-flex flex-column justify-content-center text-secondary">
+              <u>{{'SWITCH_TO_RUSSIAN_VERSION' | translate}}</u>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nb-layout-column>
+</nb-layout>

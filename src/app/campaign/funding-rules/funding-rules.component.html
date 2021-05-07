@@ -1,0 +1,62 @@
+<div class="d-flex justify-content-center">
+  <div class="funding-container p-4 mt-5 mb-5 w-75 bg-white border rounded">
+    <div class="row">
+      <div class="col-9 d-flex flex-column">
+        <h1>{{'RULES_OF_CAMPAIGN_CREATION' | translate}}</h1>
+        <div class="video-content mt-4">
+          <iframe class="w-100 h-100"
+                  src="https://www.youtube.com/embed/bCNsXA8YTfo"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowfullscreen></iframe>
+        </div>
+        <h2 class="mt-4">{{'YOUR_CAMPAIGN_WILL_START' | translate}}</h2>
+        <ul class="pl-4">
+          <li class="pt-2">{{'THE_GOALS_AND_TERMS_OF_YOUR_CAMPAIGN_ARE_CLEAR_AND_SATISFY' | translate}}
+            <a class="text-red" href="">{{'TERMS_OF_SERVICE' | translate}}</a>;</li>
+          <li class="pt-2">{{'YOU_HAVE_DETERMINED_CAMPAIGN_IS_TIME_LIMITS_AND_OR_GOALS' | translate}}</li>
+          <li class="pt-2">{{'YOU_HAVE_DETERMINED_CAMPAIGN_REWARDS_AND_TERMS_OF_THEIR_RECEIVING' | translate}}</li>
+        </ul>
+        <h2 class="mt-4">{{'YOU_CAN_START_A_CAMPAIGN_AT_OUR_SITE' | translate}}</h2>
+        <ul class="pl-4">
+          <li class="pt-2">{{'YOU_ARE_18YO_OR_OLDER' | translate}}</li>
+          <li class="pt-2">{{'YOU_HAVE_AN_ACTIVE_BANK_ACCOUNT' | translate}}</li>
+          <li class="pt-2">{{'YOU_AND_OR_YOUR_COMPANY_HAVE_MET_ALL_REQUIREMENTS_FROM' | translate}}
+            <a class="text-red" href="">{{'TERMS_OF_SERVICE' | translate}}</a>.</li>
+        </ul>
+        <h2 class="mt-4">{{'CAMPAIGN_CREATION_STARTS_LIKE_THIS' | translate}}</h2>
+        <ul class="pl-4">
+          <li class="pt-2">{{'YOU_ARE_FILLING_IN_ALL_THE_NECESSARY_DATA_FOLLOWING_THE_INSTRUCTIONS' | translate}}</li>
+          <li class="pt-2">{{'THEN_OUR_MODERATORS_WILL_CHECK_YOUR_CAMPAIGN' | translate}}</li>
+          <li class="pt-2">{{'OUR_PROJECT_MANAGER_WILL_CONTACT_YOU_TO_MAKE_A_LEGAL_AGREEMENT_ABOUT_TERMS_OF_SERVICE' | translate}}</li>
+          <li class="pt-2">{{'AFTER_APPROVING_ALL_THE_DETAILS_YOUR_CAMPAIGN_CAN_BE_STARTED' | translate}}</li>
+        </ul>
+        <div class="box-create-campaign d-flex justify-content-between mt-4 p-5">
+          <div class="d-flex">
+            <input class="form-checkbox mr-2 align-self-center" type="checkbox">
+            <p class="m-0 align-self-center">{{'I_AGREE_WITH' | translate}}
+              <a class="text-red" href="">{{'TERMS_OF_SERVICE' | translate}}</a></p>
+          </div>
+          <button class="create-button mr-5 p-2"
+                  (click)="createCampaign()">{{'CREATE_CAMPAIGN' | translate}}</button>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="box-rules p-3">
+          <h6 class="pl-3 font-weight-bold text-small">{{'THESE_TYPES_OF_CAMPAIGNS_ARE_NOT_ALLOWED_ON_OUR_SITE' | translate}}</h6>
+          <ul class="pl-3 text-small">
+            <li class="pt-2">{{'CAMPAIGNS_THAT_HAS_NO_CREATIVE_OR_SOCIAL_GOALS' | translate}}</li>
+            <li class="pt-2">{{'UNETHICAL_CAMPAIGNS' | translate}}</li>
+            <li class="pt-2">{{'CAMPAIGNS_THAT_PURSUE_ONLY_PRIVATE_INTERESTS' | translate}}</li>
+            <li class="pt-2">{{'CAMPAIGNS_THAT_EXIST_ON_OTHER_SERVICES' | translate}}</li>
+            <li class="pt-2">{{'POLITICAL_OR_RELIGIOUS_CAMPAIGNS' | translate}}</li>
+            <li class="pt-2">{{'CAMPAIGNS_THAT_DO_NOT_CORRESPOND_TO_REPUBLIC_OF_BELARUS_LAWS' | translate}}</li>
+            <li class="pt-2">{{'CAMPAIGNS_THAT_DO_NOT_MET_ALL_REQUIREMENTS_FROM' | translate}}
+              <a class="text-red" href="">{{'RULES' | translate}}</a>.</li>
+          </ul>
+          <p class="text-small">{{'SITE_ADMINISTRATION_HAS_THE_RIGHT_TO_REFUSE_YOUR_CAMPAIGN_WITHOUT_ANY_EXPLANATIONS' | translate}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

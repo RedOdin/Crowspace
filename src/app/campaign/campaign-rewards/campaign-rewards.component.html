@@ -1,0 +1,90 @@
+<div class="d-flex justify-content-center">
+  <div class="d-flex flex-column mb-5 w-75">
+    <div class="d-flex justify-content-center p-4">
+      <div *ngIf="campaign"
+           class="d-flex flex-column">
+        <div class="text-extra-large align-self-center">
+          {{'PURCHASE_AT_CAMPAIGN' | translate}}
+        </div>
+        <div class="campaign-name align-self-center mt-3">
+          <a class="text-extra-large text-red font-weight-bold"
+             href=""><u>{{campaign.title}}</u></a>
+        </div>
+        <div class="align-self-center d-flex mt-2">
+          <p class="mr-1 m-0">{{'AUTHOR' | translate}}</p>
+          <a class="text-red text-decoration-none"
+             href="">{{campaign.login}}</a>
+        </div>
+      </div>
+    </div>
+    <div class="card-shadow bg-white rounded p-5">
+      <div class="text-large font-weight-bold text-red">
+          {{'DONATE' | translate | titlecase}}
+      </div>
+      <div class="w-100 d-flex mt-4 border flex-column p-4">
+        <div class="d-flex justify-content-between">
+          <div class="font-weight-bold">
+            {{'SUPPORT_FOR_ANY_AMOUNT' | translate}}
+          </div>
+          <div class="d-flex">
+            <div class="text-secondary text-medium mr-2">
+              {{'SUPPORTED' | translate | uppercase}}
+            </div>
+            <div class="font-weight-bold text-large">
+              {{6}}
+            </div>
+          </div>
+        </div>
+        <div class="mt-3 text-secondary text-small">
+          {{'I_JUST_WANT_TO_SUPPORT_THE_PROJECT' | translate}}
+        </div>
+        <div class="input-group mt-3">
+          <input class="p-3 w-50 font-weight-bold"
+                 value="100"
+                 type="text">
+          <div class="input-group-append">
+            <span class="input-group-text">$</span>
+          </div>
+        </div>
+        <div class="mt-3">
+          <button class="create-button p-3 px-5">{{'PROCEED' | translate | uppercase}}</button>
+        </div>
+      </div>
+      <div (click)="showReward(reward)"
+           *ngFor="let reward of rewards"
+           class="my-card-container p-4 border d-flex w-100 mt-4">
+        <div>
+          <img src="{{reward.image}}" height="170" width="250">
+        </div>
+        <div class="d-flex flex-column justify-content-between w-100">
+          <div class="w-100 pl-4 d-flex flex-column">
+            <div class="d-flex justify-content-between">
+              <div class="text-red text-large">
+                {{reward.title}}
+              </div>
+              <div class="d-flex">
+                <div class="font-weight-bold text-large align-self-end">
+                  {{120}} $
+                </div>
+              </div>
+            </div>
+            <div class="mt-3">
+              {{reward.description}}
+            </div>
+            <div class="mt-3 d-flex flex-column">
+              <div class="text-secondary text-medium">
+                {{'METHODS_OF_RECEIVING' | translate | uppercase}}
+              </div>
+              <div>
+                {{reward.methodsReceiving | titlecase}}
+              </div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-end">
+            <div class="text-secondary text-medium mr-2">{{'BOUGHT' | translate | uppercase}}</div>
+            <div class="font-weight-bold text-large">{{2}}</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</div>

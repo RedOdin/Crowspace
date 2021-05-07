@@ -1,0 +1,147 @@
+<div class="d-flex justify-content-center my-4">
+  <div *ngIf="campaign"
+       class="px-5 py-4 bg-white w-75 rounded card-shadow">
+    <div class="d-flex justify-content-between">
+      <div class="text-extra-large font-weight-bolder">{{campaign.title}}</div>
+      <div>
+        <div class="active-container p-2 text-small font-weight-bold"><i>ACTIVE</i></div>
+      </div>
+    </div>
+    <div class="w-75 mt-2">
+      {{campaign.description}}
+    </div>
+    <div class="d-flex justify-content-between w-100">
+      <div class="video-content">
+        <div *ngIf="campaign">
+          <div class="mt-4">
+            <iframe class="w-100"
+                    [src]="iframe"
+                    frameborder="0"
+                    height=400
+                    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="info-content p-5">
+        <div class="w-100 d-flex flex-column">
+          <div class="text-extra-large-large">
+            {{campaign.money_pledged}} $
+          </div>
+          <div class="d-flex justify-content-between text-small mt-3">
+            <div>
+              {{'FROM' | translate | uppercase}} {{campaign.financial_goal}} $
+            </div>
+            <div>
+              {{'COLLECTED' | translate | uppercase}} {{getProgress(campaign)}} %
+            </div>
+          </div>
+          <div class="mt-2">
+            <div class="progress">
+              <div class="progress-bar bg-danger"
+                   role="progressbar"
+                   [style.width]="getProgress(campaign)+'%'"></div>
+            </div>
+          </div>
+          <div class="d-flex justify-content-between text-small pt-4">
+            <div class="d-flex flex-column">
+              <div class="text-medium font-weight-bold">
+                4234 {{'TIMES' | translate}}
+              </div>
+              <div class="text-secondary">
+                {{'ITEM_PURCHASED' | translate | uppercase }}
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <div class="text-medium font-weight-bold">
+                24 days
+              </div>
+              <div class="text-secondary">
+                {{'LEFT' | translate | uppercase }}
+              </div>
+            </div>
+            <div class="d-flex flex-column">
+              <div class="text-medium font-weight-bold">
+                05-08-2020
+              </div>
+              <div class="text-secondary">
+                {{'STARTED' | translate | uppercase }}
+              </div>
+            </div>
+          </div>
+          <div>
+            <button class="create-button text-medium w-100 p-3 mt-4"
+                    routerLink="donate">{{'DONATE' | translate | uppercase}}</button>
+          </div>
+          <div class="d-flex justify-content-around mt-3 text-small">
+            <a class="text-red"
+               href="">
+              <img class="mr-2"
+                   src="../../../assets/images/icons/icon_menu.png"
+                   height="20">
+              <u>{{campaign.categories}}</u>
+            </a>
+            <a class="text-red"
+               href="">
+              <img class="mr-2"
+                   src="../../../assets/images/icons/icon_place.png"
+                   height="20">
+              <u>{{campaign.country}}</u>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="user"
+         class="d-flex mt-3 justify-content-between border-bottom pb-3">
+      <div class="d-flex">
+        <div class="">
+          <img (click)="showMyPage(user.id)"
+               class="cursor-pointer rounded"
+               src="{{user.image}}"
+               height="60"
+               width="60">
+        </div>
+        <div class="d-flex flex-column ml-3">
+          <div class="text-small text-secondary">
+            {{'AUTHOR' | translate | uppercase}}
+          </div>
+          <div class="text-medium">
+            <a class="cursor-pointer font-weight-bold text-red"
+               (click)="showMyPage(user.id)">{{user.login}}</a>
+          </div>
+          <div class="text-small text-secondary">
+            1 {{'PROJECT' | translate}}
+          </div>
+        </div>
+        <div class="ml-4 align-self-center">
+          <button class="button-subscribe text-small p-1 px-3">{{'SUBSCRIBE' | translate | uppercase}}</button>
+        </div>
+      </div>
+     <div class="d-flex flex-column justify-content-center">
+       <nb-icon *ngIf="!isLike"
+                (click)="like()"
+                class="heart-icon"
+                icon="heart-outline"></nb-icon>
+       <nb-icon *ngIf="isLike"
+                (click)="dislike()"
+                class="heart-icon"
+                icon="heart"></nb-icon>
+     </div>
+    </div>
+    <div class="d-flex justify-content-around my-3 border-bottom">
+      <a class="nav-panel-item h-100 pb-3 px-3"
+         routerLink="comments"
+         routerLinkActive="nav-panel-active">{{'COMMENTS' | translate | titlecase}}</a>
+      <a class="nav-panel-item h-100 pb-3 px-3"
+         routerLink="backers"
+         routerLinkActive="nav-panel-active">{{'BACKERS' | translate | titlecase}}</a>
+      <a class="nav-panel-item h-100 pb-3 px-3"
+         routerLink="likes"
+         routerLinkActive="nav-panel-active">{{'LIKES' | translate | titlecase}}</a>
+    </div>
+    <div>
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+.main-container {
+  background-color: #e8e8e8;
+  background-size: cover;
+}
+
+.main-content {
+  min-height: calc(100vh - 8rem);
+}
+
+.main-menu {
+  height: 4rem;
+}
+
+::ng-deep .nb-theme-default nb-layout .layout .layout-container .content .columns nb-layout-column{
+  padding: 0;
+}
+
+.main-menu{
+  box-shadow: 0 0.1875rem 0.25rem rgba(37,73,89,.1);
+}
+
+.footer{
+  box-shadow: 0 -0.1875rem 0.25rem rgba(37,73,89,.1);
+}
+
+.switch-cursor{
+  cursor: pointer;
+}

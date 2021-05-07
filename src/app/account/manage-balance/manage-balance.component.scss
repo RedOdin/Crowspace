@@ -1,0 +1,52 @@
+.content-container{
+  width: 33rem;
+  height: 18rem;
+}
+
+.card-first, .card-second{
+  width: 25rem;
+  height: 15rem;
+  border-radius: 1rem;
+  background: #dbd9d9;
+  border: 0.0625rem solid #7b7b7b;
+  position: relative;
+}
+
+.card-first{
+  z-index: 1;
+}
+
+.card-second{
+  top: -13rem;
+  left: 8rem;
+}
+
+.bg-card-strip{
+  background-color: #a1a1a1;
+  height: 3.5rem;
+}
+
+.bg-card-strips{
+  background-color: #a1a1a1;
+  height: 0.25rem;
+}
+
+.card-strips{
+  height: 0.5rem;
+}
+
+.card-input, .cvv-input{
+  font-size: 1.125rem;
+}
+
+.date-input, .cvv-input{
+  width: 4rem;
+}
+
+.container-left-strips{
+  width: 18.5rem;
+}
+
+.container-right-strips{
+  width: 2.5rem;
+}

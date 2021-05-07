@@ -1,0 +1,24 @@
+@import "./../../../styles/base-variables";
+
+.campaigns-container{
+  width: 85%;
+}
+
+.select-filter{
+  background: transparent;
+  color: $red;
+}
+
+.select-filter:active{
+  color: $darkRed;
+}
+
+.page-item.active .page-link{
+  background-color: $darkRed;
+  border-color: $darkRed;
+}
+
+.card-container:hover{
+  box-shadow: 0.5rem 0.5rem 1rem 0 rgba(156, 18, 57, 0.3);
+}
+

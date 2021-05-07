@@ -1,0 +1,20 @@
+{
+  "LOG_IN": "Вход",
+  "LOG_ME_IN": "Войти на сайт",
+  "SIGN_UP": "Зарегистрируйтесь!",
+  "NEW_TO_CROWSPACE": "Первый раз тут?",
+  "EMAIL": "Ваш email",
+  "PASSWORD": "Пароль",
+  "REWARDS": "Вознаграждения",
+  "REGISTER": "Регистрация",
+  "SIGN_ME_UP": "Войти!",
+  "HAVE_AN_ACCOUNT": "Уже были у нас?",
+  "CONFIRM_PASSWORD": "Подтвердите пароль",
+  "HOME": "Главная",
+  "CONTACTS": "Контакты",
+  "CREATE_PROJECT": "Создать проект",
+  "SIGN_IN": "Вход",
+  "RUSSIAN": "Русский",
+  "ENGLISH": "English",
+  "CAMPAIGNS": "Кампании"
+}

@@ -1,0 +1,69 @@
+<div class="d-flex justify-content-center">
+<div *ngIf="user"
+     class="d-flex flex-column w-75">
+  <div class="d-flex justify-content-between py-5">
+    <div class="d-flex">
+      <div class="mr-4">
+        <img class="rounded main-account-image"
+             src="{{user.image}}"
+             height="60"
+             width="60">
+      </div>
+      <div class="d-flex flex-column">
+        <div class="d-flex text-large">
+          <div>
+            {{user.login}}
+          </div>
+          <div class="ml-3 text-small align-self-center">
+            ID: {{user.id}}
+          </div>
+        </div>
+        <div class="mt-1">
+          <a class="text-small text-red"
+             routerLink="/account/settings"><u>{{'SETTINGS' | translate}}</u></a>
+        </div>
+        <div>
+          <a class="text-small text-red cursor-pointer"
+             (click)="showMyPage()"><u>{{'MY_PAGE' | translate}}</u></a>
+        </div>
+      </div>
+    </div>
+    <div class="d-flex flex-column">
+      <div class="d-flex">
+        <div class="text-medium align-self-center mr-2">
+          {{'ACCOUNT_BALANCE' | translate}}:
+        </div>
+        <div class="text-large">
+          <i>{{user.balance}} $</i>
+        </div>
+      </div>
+      <div>
+        <u><a class="text-small text-red"
+              routerLink="/account/balance">{{'MANAGE_BALANCE' | translate}}</a></u>
+      </div>
+    </div>
+  </div>
+  <div class="pb-3 d-flex justify-content-around">
+    <div>
+      <a class="text-medium text-secondary text-large text-decoration-none"
+         routerLink="/account/my-projects">{{'CREATED_CAMPAIGNS' | translate}}</a>
+    </div>
+    <div>
+      <a class="text-medium text-secondary text-large text-decoration-none"
+         routerLink="/account/my-purchased-projects">{{'PURCHASED_CAMPAIGNS' | translate}}</a>
+    </div>
+    <div>
+      <a class="text-medium text-secondary text-large text-decoration-none"
+         routerLink="/account/purchases">{{'PURCHASES_REWARDS' | translate}}</a>
+    </div>
+    <div>
+      <a (click)="exit()"
+         class="text-secondary text-large text-decoration-none"
+         routerLink="/campaigns">{{'LOG_OUT' | translate}}</a>
+    </div>
+  </div>
+  <div class="menu-account bg-white p-5 mb-4 rounded w-100">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+</div>

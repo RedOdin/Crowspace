@@ -1,0 +1,17 @@
+<div *ngIf="users">
+  <div *ngFor="let user of users"
+       class="d-flex justify-content-between card-user p-2">
+    <div class="d-flex">
+      <img class="mr-3"
+           src="{{user.image}}"
+           height="50"
+           width="50">
+      <div class="font-weight-bold align-self-center">
+        {{user.login}}
+      </div>
+    </div>
+    <div class="d-flex align-self-center text-secondary text-small font-weight-bold">
+      20 May 2020 in 15:23
+    </div>
+  </div>
+</div>

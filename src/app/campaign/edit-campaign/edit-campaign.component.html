@@ -1,0 +1,240 @@
+<div class="d-flex bg-white p-3 justify-content-between border-top">
+  <h2 class="pl-5 font-weight-normal">{{'CAMPAIGN_CREATION' | translate}}</h2>
+  <a routerLink="/faq"
+     class="m-0 align-self-center pr-5 text-red">{{'HELP' | translate | uppercase}}</a>
+</div>
+<form class="d-flex justify-content-center flex-column">
+  <div class="add-shadow align-self-center w-75 bg-white px-3 rounded my-4">
+    <p class="text-red mb-0 mt-4 mb-3 bg-white w-25 p-2 pl-3 text-red text-large-large">{{'BASIC_DATA' | translate | uppercase }}</p>
+    <table class="mb-4 w-100 bg-white ">
+      <tbody class="">
+      <tr class="m-0 p-0 row">
+        <td class="col-3 view-border font-weight-bold d-flex">
+          <div class="align-self-center">
+            {{'TITLE' | translate}}
+          </div>
+        </td>
+        <td class="col-9 view-border p-0">
+          <input class="w-100 h-100 p-3 border-0"
+                 type="text"
+                 placeholder="{{'TITLE' | translate}}">
+        </td>
+      </tr>
+
+      <tr class="m-0 p-0 row">
+        <td class="col-3 view-border font-weight-bold d-flex">
+          <div class="align-self-center">
+            {{'LINK_TO_CAMPAIGN' | translate}}
+          </div>
+        </td>
+        <td class="col-9 view-border p-0 d-flex">
+          <div class="align-self-center pl-3 pt-3 pb-3">
+            <p class="m-0">https://crowspace.ru/campaigns/</p>
+          </div>
+          <input class="w-100 h-100 border-0"
+                 type="text"
+                 placeholder="{{idCampaign}}">
+        </td>
+      </tr>
+
+      <tr class="m-0 p-0 row">
+        <td class="col-3 view-border font-weight-bold d-flex">
+          <div class="align-self-center">
+            {{'IMAGE' | translate}}
+          </div>
+        </td>
+        <td class="col-9 view-border p-0">
+          <input class="w-100 h-100 p-3 border-0"
+                 type="text"
+                 placeholder="{{'PHOTO_URL' | translate}}">
+        </td>
+      </tr>
+
+      <tr class="m-0 p-0 row">
+        <td class="col-3 view-border font-weight-bold d-flex">
+          <div class="align-self-center">
+            {{'VIDEO' | translate}}
+          </div>
+        </td>
+        <td class="col-9 view-border p-0">
+          <input class="w-100 h-100 p-3 border-0"
+                 type="text"
+                 placeholder="{{'VIDEO_URL' | translate}}">
+        </td>
+      </tr>
+
+      <tr class="m-0 p-0 row">
+        <td class="col-3 view-border font-weight-bold d-flex">
+          <div class="align-self-center pt-5 pb-5">
+            {{'DESCRIPTION' | translate}}
+          </div>
+        </td>
+        <td class="col-9 view-border p-0">
+          <textarea class="w-100 h-100 p-3 border-0"
+                    placeholder="{{'DESCRIPTION' | translate}}"></textarea>
+        </td>
+      </tr>
+
+      <tr class="m-0 p-0 row">
+        <td class="col-3 view-border font-weight-bold d-flex">
+          <div class="align-self-center">
+            {{'COUNTRY_OF_GOALS_ACHIEVEMENT' | translate}}
+          </div>
+        </td>
+        <td class="col-9 view-border p-0">
+          <input class="w-100 h-100 p-3 border-0"
+                 type="text"
+                 placeholder="{{'COUNTRY_OF_GOALS_ACHIEVEMENT' | translate}}">
+        </td>
+      </tr>
+
+      <tr class="m-0 p-0 row">
+        <td class="col-3 view-border font-weight-bold d-flex">
+          <div class="align-self-center">
+            {{'FINANCIAL_GOAL' | translate}}, $
+          </div>
+        </td>
+        <td class="col-9 view-border p-0">
+          <input class="w-100 h-100 p-3 border-0"
+                 type="text"
+                 value="0">
+        </td>
+      </tr>
+
+      <tr class="m-0 p-0 row">
+        <td class="col-3 view-border font-weight-bold d-flex">
+          <div class="align-self-center">
+            {{'TIME_LIMITS' | translate}}
+          </div>
+        </td>
+        <td class="col-9 view-border p-0">
+          <input class="w-100 h-100 p-3 border-0"
+                 type="date"
+                 value="2020-04-02">
+        </td>
+      </tr>
+
+      <tr class="m-0 p-0 row">
+        <td class="col-3 view-border font-weight-bold d-flex">
+          <div class="align-self-center">
+            {{'CHECKING_ACCOUNT' | translate}}
+          </div>
+        </td>
+        <td class="col-9 view-border p-0">
+          <input class="w-100 h-100 p-3 border-0"
+                 type="text"
+                 placeholder="{{'CHECKING_ACCOUNT' | translate}}">
+        </td>
+      </tr>
+      </tbody>
+    </table>
+    <button class="create-button p-3 border mb-4 w-25">{{'SAVE_YOUR_CAMPAIGN' | translate}}</button>
+  </div>
+  <div class="add-shadow align-self-center w-75 bg-white p-3 mb-4 rounded">
+    <div class="d-flex justify-content-between">
+      <p class="text-red mb-0 bg-white w-25 mb-3 p-2 pl-3 text-red text-large-large">{{'REWARDS' | translate | uppercase }}</p>
+      <div>
+        <button (click)="addReward()" class="create-button p-2 px-3">
+          {{'ADD_REWARD' | translate}}
+        </button>
+      </div>
+    </div>
+    <div *ngFor="let reward of rewards">
+      <div (click)="deleteReward(reward)"
+           class="delete-reward text-red"><u>{{'DELETE' | translate}}</u></div>
+      <table class="mb-4 w-100 bg-white">
+        <tbody>
+        <tr class="m-0 p-0 row">
+          <td class="col-3 view-border font-weight-bold d-flex">
+            <div class="align-self-center">
+              {{'TITLE' | translate}}
+            </div>
+          </td>
+          <td class="col-9 view-border p-0">
+            <input class="w-100 h-100 p-3 border-0"
+                   type="text"
+                   placeholder="{{'TITLE' | translate}}">
+          </td>
+        </tr>
+
+        <tr class="m-0 p-0 row">
+          <td class="col-3 view-border font-weight-bold d-flex">
+            <div class="align-self-center pt-5 pb-5">
+              {{'DESCRIPTION' | translate}}
+            </div>
+          </td>
+          <td class="col-9 view-border p-0">
+          <textarea class="w-100 h-100 p-3 border-0"
+                    placeholder="{{'DESCRIPTION' | translate}}"></textarea>
+          </td>
+        </tr>
+
+        <tr class="m-0 p-0 row">
+          <td class="col-3 view-border font-weight-bold d-flex">
+            <div class="align-self-center pt-5 pb-5">
+              {{'DELIVERY_METHODS' | translate}}
+            </div>
+          </td>
+          <td class="col-9 view-border p-0">
+          <textarea class="w-100 h-100 p-3 border-0"
+                    placeholder="{{'DELIVERY_METHODS' | translate}}"></textarea>
+          </td>
+        </tr>
+
+        <tr class="m-0 p-0 row">
+          <td class="col-3 view-border font-weight-bold d-flex">
+            <div class="align-self-center">
+              {{'COST' | translate}}, $
+            </div>
+          </td>
+          <td class="col-9 view-border p-0">
+            <input class="w-100 h-100 p-3 border-0"
+                   type="text"
+                   value="0">
+          </td>
+        </tr>
+
+        <tr class="m-0 p-0 row">
+          <td class="col-3 view-border font-weight-bold d-flex">
+            <div class="align-self-center">
+              {{'AMOUNT' | translate}}
+            </div>
+          </td>
+          <td class="col-9 view-border p-0">
+            <input class="w-100 h-100 p-3 border-0"
+                   type="text"
+                   value="10">
+          </td>
+        </tr>
+
+        <tr class="m-0 p-0 row">
+          <td class="col-3 view-border font-weight-bold d-flex">
+            <div class="align-self-center">
+              {{'APPROXIMATE_SHIPPING_DATE' | translate}}
+            </div>
+          </td>
+          <td class="col-9 view-border p-0">
+            <input class="w-100 h-100 p-3 border-0"
+                   type="date"
+                   value="2020-04-02">
+          </td>
+        </tr>
+
+        <tr class="m-0 p-0 row">
+          <td class="col-3 view-border font-weight-bold d-flex">
+            <div class="align-self-center">
+              {{'IMAGE' | translate}}
+            </div>
+          </td>
+          <td class="col-9 view-border p-0">
+            <input class="w-100 h-100 p-3 border-0"
+                   type="text"
+                   placeholder="{{'PHOTO_URL' | translate}}">
+          </td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <button class="create-button p-3 border mb-4 w-25">{{'SAVE_YOUR_REWARDS' | translate}}</button>
+  </div>
+</form>

@@ -1,0 +1,93 @@
+<div *ngIf="user">
+  <div class="w-100 text-extra-large text-red">
+    {{'SETTINGS' | translate}}
+  </div>
+  <div class="d-flex mt-4">
+    <div class="d-flex flex-column w-50 mr-4">
+      <label class="text-secondary text-medium">{{'LOGIN' | translate | uppercase}}</label>
+      <input [(ngModel)]="user.login"
+             name="{{'LOGIN' | translate}}"
+             type="text"
+             class="p-3 border"
+             placeholder="{{'LOGIN' | translate}}">
+    </div>
+    <div class="d-flex flex-column w-50">
+      <label class="text-secondary text-medium">{{'IMAGE' | translate | uppercase}}</label>
+      <input [(ngModel)]="user.image"
+             name="{{'IMAGE' | translate}}"
+             type="text"
+             class="p-3 border"
+             placeholder="{{'IMAGE' | translate}}">
+    </div>
+  </div>
+  <div class="d-flex mt-4">
+    <div class="d-flex flex-column w-50 mr-4">
+      <label class="text-secondary text-medium">{{'COUNTRY' | translate | uppercase}}</label>
+      <input [(ngModel)]="user.country"
+             name="{{'COUNTRY' | translate}}"
+             type="text"
+             class="p-3 border"
+             placeholder="{{'COUNTRY' | translate}}">
+    </div>
+    <div class="d-flex flex-column w-50">
+      <label class="text-secondary text-medium">{{'CITY' | translate | uppercase}}</label>
+      <input [(ngModel)]="user.city"
+             name="{{'CITY' | translate}}"
+             type="text"
+             class="p-3 border"
+             placeholder="{{'CITY' | translate}}">
+    </div>
+  </div>
+  <div class="d-flex mt-4">
+    <div class="d-flex w-50 mr-4">
+      <div class="d-flex flex-column w-50 mr-4">
+        <label class="text-secondary text-medium">{{'GENDER' | translate | uppercase}}</label>
+        <input [(ngModel)]="user.gender"
+               name="{{'GENDER' | translate}}"
+               type="text"
+               class="p-3 border"
+               placeholder="{{'GENDER' | translate}}">
+      </div>
+      <div class="d-flex flex-column w-50">
+        <label class="text-secondary text-medium">{{'BIRTHDAY' | translate | uppercase}}</label>
+        <input [(ngModel)]="user.birthday"
+               name="{{'BIRTHDAY' | translate}}"
+               type="date"
+               class="p-3 border"
+               placeholder="{{'BIRTHDAY' | translate}}">
+      </div>
+    </div>
+    <div class="d-flex flex-column w-50">
+      <label class="text-secondary text-medium">{{'PHONE_NUMBER' | translate | uppercase}}</label>
+      <input [(ngModel)]="user.phoneNumber"
+             name="{{'PHONE_NUMBER' | translate}}"
+             type="text"
+             class="p-3 border"
+             placeholder="{{'PHONE_NUMBER' | translate}}">
+    </div>
+  </div>
+  <div class="d-flex mt-4">
+    <div class="d-flex flex-column mr-4">
+      <label class="text-secondary text-medium">{{'YOUR_PHOTO' | translate | uppercase}}</label>
+      <img src="{{user.image}}"
+           class="account-image"
+           height="200"
+           width="200"
+           alt="">
+    </div>
+    <div class="d-flex flex-column w-100">
+      <label class="text-secondary text-medium">{{'ABOUT' | translate | uppercase}}</label>
+      <textarea [(ngModel)]="user.about"
+                name="{{'ABOUT' | translate}}"
+                type="text"
+                class="textarea-settings p-3 border"
+                placeholder="{{'ABOUT' | translate}}"></textarea>
+    </div>
+  </div>
+  <div class="d-flex justify-content-end mt-4">
+    <button (click)="saveChanges()"
+            class="create-button px-5 p-3 text-medium">
+      {{'SAVE_CHANGES' | translate | uppercase}}
+    </button>
+  </div>
+</div>

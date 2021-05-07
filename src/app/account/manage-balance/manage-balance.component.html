@@ -1,0 +1,76 @@
+<div class="d-flex w-100">
+  <div class="d-flex flex-column justify-content-center">
+    <div class="w-100 text-extra-large text-red">
+      {{'REPLENISH_ACCOUNT' | translate}}
+    </div>
+    <div class="content-container mt-5">
+      <div class="card-first">
+        <div class="w-100 h-100 d-flex flex-column p-4 justify-content-between">
+          <div>
+            <input class="card-input p-2 w-100"
+                   type="text"
+                   placeholder="{{'CARD_NUMBER' | translate}}">
+          </div>
+          <div class="d-flex">
+            <div>
+              <input class="card-input date-input p-2"
+                     type="text"
+                     placeholder="{{'MM' | translate}}">
+            </div>
+            <p class="mx-2 align-self-center m-0 text-extra-large text-red">/</p>
+            <div>
+              <input class="card-input date-input p-2"
+                     type="text"
+                     placeholder="{{'YY' | translate}}">
+            </div>
+          </div>
+          <div>
+            <input class="card-input p-2 w-100"
+                   type="text"
+                   placeholder="{{'OWNERS_NAME' | translate}}">
+          </div>
+        </div>
+      </div>
+      <div class="card-second">
+        <div class="d-flex flex-column w-100">
+          <div class="mt-4 bg-card-strip w-100"></div>
+          <div class="d-flex pt-4">
+            <div class="container-left-strips d-flex flex-column">
+              <div class="bg-card-strips w-100"></div>
+              <div class="card-strips w-100"></div>
+              <div class="bg-card-strips w-100"></div>
+              <div class="card-strips w-100"></div>
+              <div class="bg-card-strips w-100"></div>
+              <div class="card-strips w-100"></div>
+              <div class="bg-card-strips w-100"></div>
+            </div>
+            <div>
+              <input class="cvv-input p-2"
+                     type="text"
+                     placeholder="{{'CVC' | translate | uppercase}}">
+            </div>
+            <div class="container-right-strips d-flex flex-column">
+              <div class="bg-card-strips w-100"></div>
+              <div class="card-strips w-100"></div>
+              <div class="bg-card-strips w-100"></div>
+              <div class="card-strips w-100"></div>
+              <div class="bg-card-strips w-100"></div>
+              <div class="card-strips w-100"></div>
+              <div class="bg-card-strips w-100"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <form class="p-5 d-flex flex-column w-100">
+    <p class="text-large">{{'REPLENISHMENT_AMOUNT_WILL_BE_IN_DOLLARS' | translate}} $</p>
+    <input [(ngModel)]="amount"
+           name="amount"
+           class="p-2"
+           type="text"
+           placeholder="{{'AMOUNT' | translate}}">
+    <button (click)="replenish()"
+            class="create-button mt-4 w-50 p-2">{{'REPLENISH' | translate}}</button>
+  </form>
+</div>

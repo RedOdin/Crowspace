@@ -1,0 +1,19 @@
+@import "./../../../styles/base-variables";
+
+.price-change{
+  cursor: pointer;
+}
+
+.input-group-text{
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.input-group-text:hover{
+  background: $darkRed;
+  color: white;
+}
+
+.reward-container{
+  box-shadow: 0 0 0.5rem 0.25rem rgba(37,73,89,.1);;
+}

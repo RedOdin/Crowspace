@@ -1,0 +1,61 @@
+@import "./../styles/base-variables";
+
+.form-input{
+  height: 4rem;
+  font-size: 1.5rem;
+  padding-left: 1rem;
+}
+
+.form-button{
+  height: 4rem;
+  font-size: 1.5rem;
+  background-color: grey;
+  border: 0.0625rem solid white;
+  color: white;
+}
+
+.create-button{
+  color: white;
+  background-color: #5a1c1c;
+  border-radius: 0.5rem;
+  border: 0.0625rem solid #920000;
+  outline: none;
+}
+
+.create-button:active{
+  background-color: $red;
+  outline: none;
+}
+
+.create-button:focus{
+  outline: none;
+}
+
+.form-button:active {
+  background-color: darkgray;
+}
+
+.form-select{
+  border: 0;
+}
+
+.form-option{
+  height: 5rem;
+}
+
+.form-checkbox{
+  height: 1.75rem;
+  width: 1.75rem;
+}
+
+.view-border{
+  border: 0.0625rem solid darkgray;
+}
+
+.img-plus{
+  height: 1rem;
+}
+
+.card-shadow{
+  box-shadow: 0 0.375rem 0.5rem rgba(37,73,89,.1);
+}

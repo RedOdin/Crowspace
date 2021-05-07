@@ -1,0 +1,97 @@
+@import "base-variables";
+
+.nb-theme-default {
+  p.text-large-large {
+    font-size: 1.5rem;
+  }
+  div.text-large-large {
+    font-size: 1.5rem;
+  }
+  a.text-large-large {
+    font-size: 1.5rem;
+  }
+
+  p.text-extra-large {
+    font-size: 2rem;
+  }
+  a.text-extra-large {
+    font-size: 2rem;
+  }
+  div.text-extra-large {
+    font-size: 2rem;
+  }
+
+  p.text-extra-large-large {
+    font-size: 3rem;
+  }
+  a.text-extra-large-large {
+    font-size: 3rem;
+  }
+  div.text-extra-large-large {
+    font-size: 3rem;
+  }
+
+  p.text-dark-red {
+    color: $darkRed;
+  }
+  a.text-dark-red {
+    color: $darkRed;
+  }
+  div.text-dark-red {
+    color: $darkRed;
+  }
+
+  p.text-red {
+    color: $red;
+  }
+  a.text-red {
+    color: $red;
+  }
+  div.text-red {
+    color: $red;
+  }
+
+  p.text-light-red{
+    color: red;
+  }
+  a.text-light-red{
+    color: red;
+  }
+  div.text-light-red{
+    color: red;
+  }
+
+  p.text-small {
+    font-size: 0.75rem;
+  }
+  a.text-small {
+    font-size: 0.75rem;
+  }
+  div.text-small {
+    font-size: 0.75rem;
+  }
+
+  p.text-medium {
+    font-size: 0.875rem;
+  }
+  a.text-medium {
+    font-size: 0.875rem;
+  }
+  div.text-medium {
+    font-size: 0.875rem;
+  }
+
+  a.text-large {
+    font-size: 1.25rem;
+  }
+  p.text-large {
+    font-size: 1.25rem;
+  }
+  div.text-large {
+    font-size: 1.25rem;
+  }
+}
+
+.cursor-pointer{
+  cursor: pointer;
+}

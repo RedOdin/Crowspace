@@ -1,0 +1,27 @@
+<div class="main-container d-flex justify-content-center">
+  <div class="main-content d-flex flex-column mt-5 w-50">
+    <h2 class="align-self-center border-bottom pr-2 pl-2 mt-3 text-red">{{'REGISTER' | translate}}</h2>
+    <form class="d-flex flex-column w-100">
+      <input [(ngModel)]="user.email"
+             name="email"
+             class="form-input w-75 align-self-center mt-3"
+             type="text"
+             placeholder="{{'EMAIL' | translate}}">
+      <input [(ngModel)]="user.password"
+             name="password"
+             class="form-input w-75 align-self-center mt-3"
+             type="password"
+             placeholder="{{'PASSWORD'| translate}}">
+      <input [(ngModel)]="user.confirmPassword"
+             name="confirmPassword"
+             class="form-input w-75 align-self-center mt-3"
+             type="password"
+             placeholder="{{'CONFIRM_PASSWORD' | translate}}">
+      <button (click)="signUp()"
+              class="create-button w-75 align-self-center mt-3 p-4">{{'SIGN_ME_UP' | translate | uppercase}}</button>
+    </form>
+    <div class="align-self-center">
+      <p class="mt-2">{{'HAVE_AN_ACCOUNT' | translate}} <a class="text-red" routerLink="/sign-in">{{'LOG_IN' | translate}}!</a></p>
+    </div>
+  </div>
+</div>

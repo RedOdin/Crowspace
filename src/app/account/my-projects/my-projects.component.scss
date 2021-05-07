@@ -1,0 +1,16 @@
+@import "./../../../styles/base-variables";
+
+.fixed-image{
+  width: 18rem;
+  padding: 0.0625rem;
+}
+
+.active-container{
+  border-left: 0.5rem solid red;
+  background-color: rgba($red, 0.1);
+  color: red;
+}
+
+.delete-text, .edit-text, .link-cursor{
+  cursor: pointer;
+}
